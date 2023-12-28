@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 backend_service_name = 'backend-service'
-backend_account_url = f'http://{backend_service_name}:5000'
+backend_account_url = f'http://{backend_service_name}'
 
 backend_account_login_url = backend_account_url+'/login'
 backend_account_register_url = backend_account_url+'/register'
