@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+</head>
+<body>
+
+{% if username %}
+    <p>Welcome, {{ username }}!</p>
+    <p>Want to do something?</p>
+    <ul>
+        <li><a href="{{ url_for('userpost') }}">Post</a></li>
+        <li><a href="{{ url_for('usersearch') }}">Search</a></li>
+    </ul>
+{% else %}
+    <p>Welcome, please <a href="{{ url_for('login') }}">log in</a>.</p>
+{% endif %}
+
+</body>
+</html>
